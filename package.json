@@ -1,0 +1,22 @@
+{
+  "name": "projet-ohmyfood-youssef-el-jaimi",
+  "version": "1.0.0",
+  "description": "mon Projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YELJAIMI/Ohmyfood.git"
+  },
+  "author": "Youssef EL JAIMI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YELJAIMI/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/YELJAIMI/Ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
