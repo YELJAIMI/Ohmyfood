@@ -60,4 +60,26 @@ main .City {
   opacity: 0.8;
 }
 
+.choix ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 720px) {
+  .choix ol {
+    flex-direction: column;
+  }
+}
+.choix li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1.3rem;
+  box-shadow: 2px 1px 8px -3px #000;
+}
+.choix li :hover {
+  transform: scale(1.02);
+}
+
 /*# sourceMappingURL=style.css.map */
