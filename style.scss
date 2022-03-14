@@ -61,23 +61,43 @@ main .City{
 }
 
 .choix{
+    counter-reset: choisir;
     & ol{
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @media(max-width: 720px){
-            flex-direction: column;
+        gap: 2rem;
+        @media(max-width: 850px){
+        flex-direction: column;
         }
     }
     & li{
+        position: relative;
+        &::before{
+        content: counter(choisir);
+        counter-increment: choisir;
+        background-color: #a573e2;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        position: absolute;
+        left: -1rem;
+        bottom: 0.8rem;
+        }
+        list-style-type: none;
         background-color: #f6f6f6;
-        padding: 1rem 2rem;
-        border: 1px solid red;
+        padding: 0.3rem 1.5rem;
         flex-grow: 1;
         border-radius: 1.3rem;
         box-shadow: 2px 1px 8px -3px #000;
         & :hover{
-            transform: scale(1.02);
+        transform: scale(1.02);
+        }
+
+        & i {
+            margin: 1rem;
+            font-size: 1.2rem;
         }
     }
 }

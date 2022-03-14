@@ -60,26 +60,47 @@ main .City {
   opacity: 0.8;
 }
 
+.choix {
+  counter-reset: choisir;
+}
 .choix ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
-@media (max-width: 720px) {
+@media (max-width: 850px) {
   .choix ol {
     flex-direction: column;
   }
 }
 .choix li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
-  border: 1px solid red;
+  padding: 0.3rem 1.5rem;
   flex-grow: 1;
   border-radius: 1.3rem;
   box-shadow: 2px 1px 8px -3px #000;
 }
+.choix li::before {
+  content: counter(choisir);
+  counter-increment: choisir;
+  background-color: #a573e2;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: absolute;
+  left: -1rem;
+  bottom: 0.8rem;
+}
 .choix li :hover {
   transform: scale(1.02);
+}
+.choix li i {
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
