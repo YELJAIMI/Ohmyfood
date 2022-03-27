@@ -1,3 +1,66 @@
+.card-img {
+  max-width: 100%;
+  max-height: 36rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.title-card {
+  position: relative;
+}
+.title-card h2 {
+  font-family: "chrikhand", "cursive";
+  padding: 1.2rem;
+  margin-top: -69px;
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #f1eeee;
+}
+.title-card i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  transform: translateY(25%);
+}
+.title-card .fas {
+  color: transparent;
+  background-image: linear-gradient(#ff64ea, #7e0bca);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 150ms;
+  cursor: pointer;
+}
+.title-card:hover .fas {
+  opacity: 1;
+}
+
+h3 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.submenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.submenu h4, .submenu p {
+  margin: 0px;
+}
+@media (max-width: 900px) {
+  .submenu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.submenu .list {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.8rem;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -5,6 +68,17 @@
 body {
   margin: 0px;
   font-family: "Roboto" sans-serif;
+  background-color: #f1eeee;
+}
+
+h2 {
+  padding: 0.5rem;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -14,6 +88,7 @@ header {
   padding: 0.3rem;
   margin: 0;
   position: relative;
+  background-color: white;
 }
 
 main .City {
@@ -62,10 +137,13 @@ main .City {
 
 .choix {
   counter-reset: choisir;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 .choix ol {
   display: flex;
   gap: 2rem;
+  padding: 0 1rem;
 }
 @media (max-width: 850px) {
   .choix ol {
@@ -76,10 +154,10 @@ main .City {
   position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   flex-grow: 1;
   border-radius: 1.3rem;
-  box-shadow: 2px 1px 8px -3px #000;
+  box-shadow: 2px 1px 8px -s3px #000;
 }
 .choix li::before {
   content: counter(choisir);
@@ -93,7 +171,8 @@ main .City {
   border-radius: 100px;
   position: absolute;
   left: -1rem;
-  bottom: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .choix li :hover {
   transform: scale(1.02);
@@ -101,6 +180,101 @@ main .City {
 .choix li i {
   margin: 1rem;
   font-size: 1.2rem;
+}
+
+.cartes {
+  background-color: #f6f6f6;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+.cartes .Eat {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 1.2rem;
+}
+@media (min-width: 850px) {
+  .cartes .Eat {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.cartes .new {
+  position: relative;
+}
+.cartes .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 2rem;
+  top: 1rem;
+  border-radius: 0.3rem;
+}
+.cartes .menus {
+  border-radius: 1rem;
+}
+.cartes .menus .images {
+  height: 16rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.cartes .menus .images-1 {
+  background-image: url("images/photo-1.jpg");
+}
+.cartes .menus .images-2 {
+  background-image: url("images/photo-2.jpg");
+}
+.cartes .menus .images-3 {
+  background-image: url("images/photo-3.jpg");
+}
+.cartes .menus .images-4 {
+  background-image: url("images/photo-4.jpg");
+}
+.cartes .menus .description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.cartes .menus .description h3, .cartes .menus .description p {
+  margin: 0.3rem;
+}
+.cartes .menus .description h3 {
+  padding-top: 0.3rem;
+}
+.cartes .menus .description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0rem;
+  transform: translateY(25%);
+}
+.cartes .menus .description .fas {
+  color: transparent;
+  background-image: linear-gradient(#ff64ea, #7e0bca);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 150ms;
+}
+.cartes .menus .description:hover .fas {
+  opacity: 1;
+}
+
+footer {
+  background-color: #272626;
+  color: white;
+  padding: 0 1rem;
+}
+footer h2 {
+  font-family: "shrikhand" sans-serif;
+}
+footer p {
+  margin: 0.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
