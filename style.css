@@ -1,3 +1,39 @@
+@keyframes spin-rotate {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+body {
+  background-color: #f1eeee;
+}
+
+header {
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem lightgrey;
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
+  background-color: white;
+}
+header .fas {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+  cursor: pointer;
+}
+
 .card-img {
   max-width: 100%;
   max-height: 36rem;
@@ -7,6 +43,7 @@
 
 .title-card {
   position: relative;
+  margin-top: -3rem;
 }
 .title-card h2 {
   font-family: "chrikhand", "cursive";
@@ -41,24 +78,122 @@ h3 {
   margin: 0;
 }
 
-.submenu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 0 1rem;
-}
-.submenu h4, .submenu p {
-  margin: 0px;
+.container-flat {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 900px) {
-  .submenu {
-    grid-template-columns: repeat(1, 1fr);
+  .container-flat {
+    flex-direction: column;
+    align-items: center;
   }
 }
-.submenu .list {
-  padding: 0.5rem;
+
+.submenus {
+  max-width: 30%;
+  flex-direction: columns;
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 900px) {
+  .submenus {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+}
+.submenus h4, .submenus p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus::after {
+  content: "";
+  top: 2.5rem;
+  left: 1rem;
+  height: 0.3rem;
+  width: 3.2rem;
+  background-color: #99e2d0;
+  overflow: hidden;
+}
+.submenus h3 {
+  margin: 0rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+.submenus .ingredients {
+  display: flex;
   background-color: white;
   border-radius: 0.8rem;
+  box-shadow: 0.2rem 0.3rem 1rem #cfcccc;
+  cursor: pointer;
+  margin: 0.4rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus .price {
+  margin-left: auto;
+  margin-top: auto;
+  font-weight: bolder;
+  padding: 1rem;
+}
+.submenus .list {
+  padding: 1rem;
+  overflow: hidden;
+}
+.submenus .Item-confirmation {
+  display: grid;
+  place-items: center;
+  background-color: #99e2d0;
+  padding: 1.6rem;
+  margin-right: -4rem;
+  width: 4rem;
+}
+.submenus .Item-confirmation .fas {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  width: 1.3rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  color: #99e2d0;
+}
+.submenus:hover .Item-confirmation {
+  margin-right: 0;
+  transition-duration: 0.6s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus:hover .fas {
+  animation: spin-rotate 0.6s ease-in-out;
+}
+
+.command {
+  display: grid;
+  height: 20vh;
+  place-items: center;
+}
+.command button {
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border: none;
+  box-shadow: 2px 1px 8px -3px #000;
+  background-image: linear-gradient(350deg, #7e0bca, #ff64ea);
+  transition: 200ms;
+  cursor: pointer;
+  margin-top: -1.3rem;
+}
+.command :hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 *, ::before, ::after {
@@ -68,7 +203,6 @@ h3 {
 body {
   margin: 0px;
   font-family: "Roboto" sans-serif;
-  background-color: #f1eeee;
 }
 
 h2 {
