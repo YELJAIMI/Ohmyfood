@@ -82,6 +82,7 @@ h3 {
   flex-direction: row;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 @media (max-width: 900px) {
   .container-flat {
@@ -92,8 +93,8 @@ h3 {
 
 .submenus {
   max-width: 30%;
-  flex-direction: columns;
-  gap: 2rem;
+  display: grid;
+  gap: 0.5rem;
   padding: 0 1rem;
   margin-bottom: 1rem;
 }
@@ -103,37 +104,21 @@ h3 {
     max-width: 90%;
   }
 }
-.submenus h4, .submenus p {
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.submenus::after {
-  content: "";
-  top: 2.5rem;
-  left: 1rem;
-  height: 0.3rem;
-  width: 3.2rem;
-  background-color: #99e2d0;
-  overflow: hidden;
-}
 .submenus h3 {
   margin: 0rem;
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
 }
-.submenus .ingredients {
-  display: flex;
-  background-color: white;
-  border-radius: 0.8rem;
-  box-shadow: 0.2rem 0.3rem 1rem #cfcccc;
-  cursor: pointer;
-  margin: 0.4rem 0;
+.submenus h3::after {
+  content: "";
+  top: 2.5rem;
+  left: 1rem;
+  height: 0.3rem;
+  width: 3.2rem;
+  background-color: #99e2d0;
+  position: absolute;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .submenus .price {
   margin-left: auto;
@@ -144,6 +129,33 @@ h3 {
 .submenus .list {
   padding: 1rem;
   overflow: hidden;
+}
+.submenus .list h4, .submenus .list p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus .ingredients {
+  display: flex;
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0.2rem 0.3rem 0.5rem #cfcccc;
+  cursor: pointer;
+  margin: 0.4rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus .ingredients:hover .Item-confirmation {
+  margin-right: 0;
+  transition-duration: 0.6s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submenus .ingredients:hover .fas {
+  animation: spin-rotate 0.6s ease-in-out;
 }
 .submenus .Item-confirmation {
   display: grid;
@@ -161,16 +173,6 @@ h3 {
   border-radius: 50%;
   aspect-ratio: 1;
   color: #99e2d0;
-}
-.submenus:hover .Item-confirmation {
-  margin-right: 0;
-  transition-duration: 0.6s;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.submenus:hover .fas {
-  animation: spin-rotate 0.6s ease-in-out;
 }
 
 .command {
