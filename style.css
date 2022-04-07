@@ -238,7 +238,7 @@ h3 {
 
 body {
   margin: 0px;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .loader {
@@ -350,9 +350,8 @@ main .City {
   padding: 0.5rem 1.5rem;
   flex-grow: 1;
   border-radius: 1.3rem;
-  box-shadow: 2px 1px 8px lightgrey;
+  box-shadow: 2px 1px 8px -3px lightgrey;
   cursor: pointer;
-  transform: scale(1.02);
 }
 .choix li::before {
   content: counter(choisir);
@@ -371,8 +370,10 @@ main .City {
 }
 .choix li :hover {
   transform: scale(1.02);
+  transition: 200ms;
 }
 .choix li i {
+  color: #b687f0;
   margin: 1rem;
   font-size: 1.2rem;
 }
@@ -417,6 +418,7 @@ main .City {
   height: 16rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
+  background-position: center;
 }
 .cartes .menus .images-1 {
   background-image: url("images/photo-1.jpg");
@@ -436,7 +438,9 @@ main .City {
   border-radius: 0 0 1rem 1rem;
 }
 .cartes .menus .description h3, .cartes .menus .description p {
-  margin: 0.3rem;
+  margin: 0.1rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.3rem;
 }
 .cartes .menus .description h3 {
   padding-top: 0.3rem;
@@ -466,7 +470,7 @@ footer {
   padding: 0 1rem;
 }
 footer h2 {
-  font-family: "shrikhand" sans-serif;
+  font-family: "shrikhand", sans-serif;
 }
 footer p {
   margin: 0.4rem;
