@@ -350,7 +350,8 @@ main .City {
   padding: 0.5rem 1.5rem;
   flex-grow: 1;
   border-radius: 1.3rem;
-  box-shadow: 2px 1px 8px -s3px #000;
+  box-shadow: 2px 1px 8px lightgrey;
+  cursor: pointer; 
 }
 .choix li::before {
   content: counter(choisir);
