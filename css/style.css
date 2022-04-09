@@ -421,16 +421,16 @@ main .City {
   background-position: center;
 }
 .cartes .menus .images-1 {
-  background-image: url("images/photo-1.jpg");
+  background-image: url("../Images/photo-1.jpg");
 }
 .cartes .menus .images-2 {
-  background-image: url("images/photo-2.jpg");
+  background-image: url("../Images/photo-2.jpg");
 }
 .cartes .menus .images-3 {
-  background-image: url("images/photo-3.jpg");
+  background-image: url("../Images/photo-3.jpg");
 }
 .cartes .menus .images-4 {
-  background-image: url("images/photo-4.jpg");
+  background-image: url("../Images/photo-4.jpg");
 }
 .cartes .menus .description {
   position: relative;
