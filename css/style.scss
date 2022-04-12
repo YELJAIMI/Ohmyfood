@@ -202,7 +202,7 @@ main .City{
         }
         @for $i from 1 through 4 {
             & .images-#{$i}{
-                background-image: url("../Images/photo-#{$i}.jpg");
+                background-image: url("../Images/photo-#{$i}.avif");
             } 
         }
         & .description{ 
