@@ -136,6 +136,7 @@ main .City{
         left: -1rem;
         top: 50%;
         transform: translateY(-50%);
+        color: white;
         }
         list-style-type: none;
         background-color: #f6f6f6;
@@ -242,7 +243,7 @@ main .City{
 footer{
     background-color: rgb(39, 38, 38);
     color: white;
-    padding: 0 1rem;
+    padding: 0  1.2rem 1rem;
     h2{
         font-family: "shrikhand", sans-serif;
     }
